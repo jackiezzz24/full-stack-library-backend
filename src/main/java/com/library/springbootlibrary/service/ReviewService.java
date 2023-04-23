@@ -3,6 +3,7 @@ package com.library.springbootlibrary.service;
 
 import com.library.springbootlibrary.dao.ReviewRepository;
 import com.library.springbootlibrary.entity.Review;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import requestmodels.ReviewRequest;
@@ -13,6 +14,7 @@ import java.time.LocalDate;
 @Service
 @Transactional
 public class ReviewService {
+
     private ReviewRepository reviewRepository;
 
     public ReviewService(ReviewRepository reviewRepository) {
@@ -22,7 +24,7 @@ public class ReviewService {
     public void postReview(String userEmail, ReviewRequest reviewRequest) throws Exception {
         Review validateReview = reviewRepository.findByUserEmailAndBookId(userEmail, reviewRequest.getBookId());
         if (validateReview != null) {
-            throw new Exception("Review already created.");
+            throw new Exception("Review already created");
         }
 
         Review review = new Review();
@@ -46,4 +48,5 @@ public class ReviewService {
             return false;
         }
     }
+
 }
