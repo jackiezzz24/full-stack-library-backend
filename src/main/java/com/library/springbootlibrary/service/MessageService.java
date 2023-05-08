@@ -6,6 +6,9 @@ import com.library.springbootlibrary.entity.Message;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import requestmodels.AdminQuestionRequest;
+
+import java.util.Optional;
 
 
 @Service
@@ -25,4 +28,14 @@ public class MessageService {
         messageRepository.save(message);
     }
 
+    public void putMessage(AdminQuestionRequest adminQuestionRequest, String userEmail) throws Exception {
+        Optional<Message> message = messageRepository.findById(adminQuestionRequest.getId());
+        if (!message.isPresent()){
+            throw new Exception("Message not found");
+        }
+        message.get().setAdminEmail(userEmail);
+        message.get().setResponse(adminQuestionRequest.getResponse());
+        message.get().setClosed(true);
+        messageRepository.save(message.get());
+    }
 }
