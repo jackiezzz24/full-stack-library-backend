@@ -4,7 +4,7 @@ package com.library.springbootlibrary.controller;
 import com.library.springbootlibrary.service.ReviewService;
 import com.library.springbootlibrary.utils.ExtractJWT;
 import org.springframework.web.bind.annotation.*;
-import requestmodels.ReviewRequest;
+import com.library.springbootlibrary.requestmodels.ReviewRequest;
 
 @CrossOrigin("https://localhost:3000")
 @RestController

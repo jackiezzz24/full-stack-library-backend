@@ -3,10 +3,9 @@ package com.library.springbootlibrary.service;
 
 import com.library.springbootlibrary.dao.ReviewRepository;
 import com.library.springbootlibrary.entity.Review;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import requestmodels.ReviewRequest;
+import com.library.springbootlibrary.requestmodels.ReviewRequest;
 
 import java.sql.Date;
 import java.time.LocalDate;

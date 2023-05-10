@@ -6,7 +6,7 @@ import com.library.springbootlibrary.service.MessageService;
 import com.library.springbootlibrary.utils.ExtractJWT;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import requestmodels.AdminQuestionRequest;
+import com.library.springbootlibrary.requestmodels.AdminQuestionRequest;
 
 @CrossOrigin("https://localhost:3000")
 @RestController

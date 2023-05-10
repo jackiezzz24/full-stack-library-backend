@@ -1,4 +1,4 @@
-package requestmodels;
+package com.library.springbootlibrary.requestmodels;
 
 import lombok.Data;
 
