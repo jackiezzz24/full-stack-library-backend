@@ -1,7 +1,10 @@
 # Full Stack Library Management Application - Back End
 
-+	Developed a Full Stack library management application with React front-end and Spring Boot back-end.
-+ Connected JPA repository to MySQL to store data of employee and department. 
++ Designed a Full Stack library management application enabling users to search books by title and category, checkout and give star reviews. Administers can manage book information, receive, and reply to messages.  
++ Assembled interactive functions and callbacks with React and TypeScript in frontend and the backend utilizing Spring Boot and Java.
++ Applied Spring Data JPA for data’s access layer and leveraged Apache Maven for project management.
++ Aggregate data based on business logic and persisted results into MySQL to support downstream clients.
++ Integrated login/logout features with JWT, OAuth2 and OpenID Connect to handle user roles with limited access.
 
 ## App Screenshots
 ### `Main page`
